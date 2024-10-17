@@ -10,12 +10,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(fontFamily: "Didact_Gothic"),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
               centerTitle: true,
               backgroundColor: Colors.blue[900],
-              title: const Text("Hello Flutter"),
+              title: const Text(
+                "Hello Flutter",
+                style: TextStyle(fontFamily: "Didact_Gothic"),
+              ),
               titleTextStyle: const TextStyle(color: Colors.white),
             ),
             body: Container(
@@ -31,13 +35,16 @@ class MyApp extends StatelessWidget {
                     "Welcome to Hello Flutter App!",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  const Column(
+                  Column(
                     children: [
-                      Text("Image"),
-                      SizedBox(
+                      Image.asset(
+                        "assets/images/flutter_icon.png",
+                        width: 100,
+                      ),
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text(
+                      const Text(
                         "This app is developed by ANDREW!",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
@@ -49,16 +56,16 @@ class MyApp extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.black54,
                           borderRadius: BorderRadius.circular(20)),
-                      child: const Row(
+                      child: Row(
                         children: [
-                          Text(
-                            "Image",
-                            style: TextStyle(color: Colors.white),
+                          Image.asset(
+                            "assets/images/luffy.png",
+                            width: 50,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
-                          Column(
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
